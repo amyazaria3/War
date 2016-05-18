@@ -1,0 +1,61 @@
+/**
+ * Amy Azaria & Theresa Morley-McLaughlin
+ * Mrs. Burnell
+ * AP Computer Science B7
+ * 12 May 2016
+ * Deck of Cards
+ */
+public class Card
+{
+    private int cardNum;
+    private String suit;
+    
+    public Card(int cardNumber, String cardSuit)
+    {
+        cardNum = cardNumber;
+        suit = cardSuit;
+    }
+    // following 4 methods are not necessary for this program but will be useful for future use
+    public int getCardNum ()
+    {
+        return cardNum;
+    }
+    public String getSuit ()
+    {
+        return suit;
+    }
+    public void setCardNum (int newCardNum)
+    {
+        cardNum = newCardNum;
+    }
+    public void setSuit (String newSuit)
+    {
+        suit = newSuit;
+    }    
+    public String toString ()
+    {
+        String result;
+        
+        if (cardNum == 11)
+        {
+            result = "Your card is the Jack of " + suit;
+        }
+        else if (cardNum == 12)
+        {
+            result = "Your card is the Queen of " + suit;
+        }
+        else if (cardNum == 13)
+        {
+            result = "Your card is the King of " + suit;
+        }
+        else if (cardNum == 1)
+        {
+            result = "Your card is the Ace of " + suit;
+        }
+        else
+        {
+            result = "Your card is the " + cardNum + " of " + suit;
+        } 
+        return result;
+    }
+}
